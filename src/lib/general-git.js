@@ -3,11 +3,17 @@
  */
 
 var gitDownload = require("download-github-repo");
+var log = require('./log');
 
-function fetchTemplate(callback){
-    let url = "vueManager-template/simple";
-    let dest = __dirname + "/.template"; 
-    console.log(dest);
-    gitDownload(url, dest);
+function fetchTemplate( repo, callback){
+    let url = repo.repository + "/" + repo.project;
+    let dest = repo.tempFolder;  
+    gitDownload(url, dest, function(result){ 
+        if(!result){
+            callback();
+        }else{ 
+            log.error("fail:" + result);
+        }
+    });
 }
 module.exports.fetchTemplate = fetchTemplate;

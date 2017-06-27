@@ -1,4 +1,5 @@
-//初始化命令
+#!/usr/bin/env node
+
 var program = require("commander");
 var generalGit = require('../lib/general-git');
 var options = require("../lib/options");

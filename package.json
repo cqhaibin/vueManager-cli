@@ -1,13 +1,12 @@
 {
   "name": "vuemanager-cli",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "vuemanager cli",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "init": "./src/bin/init.js"
+    "vn-init": "srcCli/bin/init.js"
   },
   "keywords": [
     "vuemanager",
@@ -15,7 +14,7 @@
   ],
   "author": "samLong",
   "license": "ISC",
-  "devDependencies": {
+  "dependencies": {
     "chalk": "^1.1.3",
     "commander": "^2.9.0",
     "consolidate": "^0.14.5",

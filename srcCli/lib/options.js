@@ -1,5 +1,5 @@
 var path = require("path");
-var _projectPath = path.join(__dirname, "..");
+var _projectPath = path.join(__dirname, "../..");
 
 module.exports.repo = {
     "repository": "vueManager-template",
